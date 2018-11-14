@@ -1,0 +1,9 @@
+{
+  "players": {
+    "player1": {
+      "name": "Katie Bell",
+      "positionId": "position1",
+      "picture": "https://vignette.wikia.nocookie.net/harrypotter/images/3/39/Katie_bell1-kl.jpg/revision/latest?cb=20090526214420",
+      "teamId": "team1",
+      "subsitute": false
+    },
