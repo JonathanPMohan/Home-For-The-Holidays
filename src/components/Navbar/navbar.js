@@ -12,8 +12,18 @@ const navbarEvents = () => {
       }).catch((err) => {
         console.error('you are still logged in', err);
       });
+    } else if (e.target.id === 'navbar-button-holidays') {
+      $('#auth').hide();
+      $('#friends').hide();
+      $('#holidays').show();
+    } else if (e.target.id === 'navbar-button-guests') {
+      $('#auth').hide();
+      $('#friends').show();
+      $('#holidays').hide();
     } else {
-      console.log(e.target.id);
+      $('#auth').show();
+      $('#friends').hide();
+      $('#holidays').hide();
     }
   });
 };
