@@ -6,14 +6,16 @@ import apiKeys from '../db/apiKeys.json';
 
 import './index.scss';
 
-// import holidays from './images/holidays.png';
+
 import navbar from './components/Navbar/navbar';
 import loginButton from './components/Auth/auth';
-// $('#holidays').attr('src', holidays);
+import checkLoginStatus from './helpers/authHelpers';
+
 
 const initializeApp = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   navbar();
+  checkLoginStatus();
   loginButton();
 };
 
