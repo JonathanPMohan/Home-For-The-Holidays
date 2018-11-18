@@ -1,9 +1,47 @@
 {
-  "players": {
-    "player1": {
-      "name": "Katie Bell",
-      "positionId": "position1",
-      "picture": "https://vignette.wikia.nocookie.net/harrypotter/images/3/39/Katie_bell1-kl.jpg/revision/latest?cb=20090526214420",
-      "teamId": "team1",
-      "subsitute": false
-    },
+  "friend1": {
+    "name": "Ricky Bobby",
+    "address": "12345 Go Fast Lane, Nashville, TN 37205",
+    "phoneNumber": "5555555555",
+    "email": "rBobby123@gmail.com",
+    "relationship": "Favorite Nascar Driver",
+    "isAvoiding": true,
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "friend2": {
+    "name": "Peter Parker",
+    "address": "324 Web Lane, New York, NY 37234",
+    "phoneNumber": "9999999999",
+    "email": "PeterParker234@gmail.com",
+    "relationship": "Co-Worker",
+    "isAvoiding": true,
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "friend3": {
+    "name": "Micheal Bolton",
+    "address": "23 Time Love Tenderness St, Nashville, TN 37209",
+    "phoneNumber": "4568887545",
+    "email": "callan@yomamma.com",
+    "relationship": "vocal coach",
+    "isAvoiding": true,
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "friend4": {
+    "name": "Kanye East",
+    "address": "337 Hollywood Blvd, Hollywood, CA 56376",
+    "phoneNumber": "5555556478",
+    "email": "keast45698@gmail.com",
+    "relationship": "sister from anotha mother",
+    "isAvoiding": true,
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "friend5": {
+    "name": "David Chappelle.",
+    "address": "23 Boring Town St, Boring, OH 45985",
+    "phoneNumber": "4562229999",
+    "email": "DaveChappelleIsHilarious456@mindspring.com",
+    "relationship": "My neighbors friends college roommate",
+    "isAvoiding": true,
+    "uid": "5555"
+  }
+}

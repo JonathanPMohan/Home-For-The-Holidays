@@ -1,9 +1,26 @@
 {
-  "players": {
-    "player1": {
-      "name": "Katie Bell",
-      "positionId": "position1",
-      "picture": "https://vignette.wikia.nocookie.net/harrypotter/images/3/39/Katie_bell1-kl.jpg/revision/latest?cb=20090526214420",
-      "teamId": "team1",
-      "subsitute": false
-    },
+  "holiday1": {
+    "name": "Thanksgiving",
+    "Date": "11/22/2018",
+    "imageUrl": "http://www.todayifoundout.com/wp-content/uploads/2017/11/thanksgiving-turkey-640x427.png",
+    "location": "My House",
+    "startTime": "12pm",
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "holiday2": {
+    "name": "Christmas",
+    "Date": "12/25/2018",
+    "imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjLyuri49veAhWM2lMKHbo4A1sQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F259871840967792097%2F&psig=AOvVaw1YvLFcBPP0is-3bprk7lVh&ust=1542556192889193",
+    "location": "Waffle House",
+    "startTime": "8am",
+    "uid": "EuRaVoOpWRbeUUc9jAr4UIIzNch2"
+  },
+  "holiday3": {
+    "name": "Super Bowl",
+    "Date": "02/03/2019",
+    "imageUrl": "https://www.betting-super-bowl.com/wp-content/uploads/2018/02/Bet-On-Superbowl-2019-Online-300x300.jpg",
+    "location": "Billy Bob's Sports Pub",
+    "startTime": "5pm",
+    "uid": "33333"
+  }
+}

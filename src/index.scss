@@ -2,5 +2,8 @@
 // @import "./styles/variables";
 
 body {
-  background-color: darkolivegreen;
+  background-color: white;
+  background-image: url("./images/background.png");
+  background-attachment: fixed;
+  text-align: center; 
 }
