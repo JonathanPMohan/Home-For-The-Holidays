@@ -7,9 +7,9 @@ import google from './google.png';
 
 const loginButton = () => {
   const domString = `
-  <button id="google-auth" class="btn btn-secondary">
+  <a href="#" id="google-auth" class="google">
   <img src="${google}"/>
-  </button>
+  </a>
   `;
   $('#auth').html(domString);
   $('#google-auth').on('click', () => {

@@ -1,9 +1,22 @@
 {
-  "players": {
-    "player1": {
-      "name": "Katie Bell",
-      "positionId": "position1",
-      "picture": "https://vignette.wikia.nocookie.net/harrypotter/images/3/39/Katie_bell1-kl.jpg/revision/latest?cb=20090526214420",
-      "teamId": "team1",
-      "subsitute": false
-    },
+  "hf1": {
+    "holidayId": "holiday1",
+    "friendId": "friend1"
+  },
+  "hf2": {
+    "holidayId": "holiday1",
+    "friendId": "friend2"
+  },
+  "hf3": {
+    "holidayId": "holiday1",
+    "friendId": "friend"
+  },
+  "hf4": {
+    "holidayId": "holiday2",
+    "friendId": "friend4"
+  },
+  "hf5": {
+    "holidayId": "holiday3",
+    "friendId": "friend5"
+  }
+}
