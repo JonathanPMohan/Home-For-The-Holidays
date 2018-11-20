@@ -9,13 +9,13 @@ import './index.scss';
 
 import navbar from './components/Navbar/navbar';
 import loginButton from './components/Auth/auth';
-import checkLoginStatus from './helpers/authHelpers';
-
+import authHelpers from './helpers/authHelpers';
+import friendsPage from './components/FriendsPage/friendsPage';
 
 const initializeApp = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   navbar();
-  checkLoginStatus();
+  authHelpers.checkLoginStatus(friendsPage);
   loginButton();
 };
 
