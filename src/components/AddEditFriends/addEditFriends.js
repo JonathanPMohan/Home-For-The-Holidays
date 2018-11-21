@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import authHelpers from '../../helpers/authHelpers';
 
 const formBuilder = () => {
@@ -38,4 +38,6 @@ const gettingFriendFromForm = () => {
     isAvoiding: false,
     uid: authHelpers.getCurrentUid(),
   };
+  console.log(friend);
 };
+export default { formBuilder, gettingFriendFromForm };
