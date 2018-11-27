@@ -4,8 +4,18 @@ import './friendsPage.scss';
 import apiKeys from '../../../db/apiKeys.json';
 import authHelpers from '../../helpers/authHelpers';
 import friendsData from '../../helpers/data/friendsData';
+import holidayFriendsData from '../../helpers/data/holidayFriendsData';
+import holidaysData from '../../helpers/data/holidaysData';
 
-const printSingleFriend = (friend) => {
+const holidayStringBuilder = (holidays) => {
+  let holidayString = '<h3>HOLIDAYS:</h3>';
+  holidays.forEach((holiday) => {
+    holidayString += `<h5>${holiday.name} ${holiday.Date}</h5>`;
+  });
+  return holidayString;
+};
+
+const printSingleFriend = (friend, holidays) => {
   const friendString = `
   <div id="singleFriend">
   <div id="singleBorder">
@@ -13,9 +23,10 @@ const printSingleFriend = (friend) => {
     <h3>${friend.relationship}</h3>
     <p>${friend.address}</p>
     <p>${friend.email}</p>
-    <p>${friend.h4honeNumber}</p>
+    <p>${friend.phoneNumber}</p>
     <button class="btn btn-danger delete-btn" data-delete-id=${friend.id}>X</button>
-    <button class="btn btn-danger edit-btn" data-edit-id=${friend.id}>EDIT</button>
+    <button class="btn btn-info edit-btn" data-edit-id=${friend.id}>EDIT</button>
+    <div class="holiday-container">${holidayStringBuilder(holidays)}</div>
     </div>
     </div>
   `;
@@ -26,10 +37,15 @@ const printSingleFriend = (friend) => {
 const getSingleFriend = (e) => {
   // firebase id
   const friendId = e.target.dataset.dropdownId;
-  friendsData.getSingleFriend(friendId)
-    .then((singleFriend) => {
-      printSingleFriend(singleFriend);
-    })
+  const uid = authHelpers.getCurrentUid();
+  friendsData.getSingleFriend(friendId).then((singleFriend) => {
+    holidayFriendsData.getHolidayIdsForFriend(friendId).then((holidayIds) => {
+      console.log('holidayIds', holidayIds);
+      holidaysData.getHolidaysByArrayOfIds(uid, holidayIds).then((holidays) => {
+        printSingleFriend(singleFriend, holidays);
+      });
+    });
+  })
     .catch((error) => {
       console.error('error in getting one friend', error);
     });
@@ -38,7 +54,7 @@ const getSingleFriend = (e) => {
 const buildDropdown = (friendsArray) => {
   let dropdown = `<div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
+    CHOOSE FRIEND
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">`;
   if (friendsArray.length) {
