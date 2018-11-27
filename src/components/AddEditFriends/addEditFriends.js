@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './addEdit.scss';
 import authHelpers from '../../helpers/authHelpers';
 import friendsData from '../../helpers/data/friendsData';
 import initializeFriendsPage from '../FriendsPage/friendsPage';
@@ -52,7 +53,7 @@ const buildAddForm = () => {
     relationship: '',
   };
 
-  let domString = '<h2>Add New Friend</h2>';
+  let domString = '<h3>ADD NEW FRIEND</h3>';
   domString += formBuilder(emptyFriend);
   domString += '<button id="add-friend">Add Friend</button>';
   $('#add-edit-friend').html(domString).show();
@@ -95,7 +96,7 @@ const showEditForm = (e) => {
   const idToEdit = e.target.dataset.editId;
   friendsData.getSingleFriend(idToEdit)
     .then((singleFriend) => {
-      let domString = '<h2>Edit Friend</h2>';
+      let domString = '<h3>EDIT FRIEND</h3>';
       domString += formBuilder(singleFriend);
       domString += `<button id="edit-friend" data-single-edit-id=${singleFriend.id}>Save Friend</button>`;
       $('#add-edit-friend').html(domString).show();
